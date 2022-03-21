@@ -1,12 +1,17 @@
+:root {
+  --main-color: #0A3641;
+}
 
 body {
 font-family: 'open sans';
 }
 a {
   text-decoration: none;
-  color:#0A3641;
+  color: var(--main-color);
 }
-
+html {
+  overflow-x: hidden;
+}
 /*---------------HEADER--------------*/ 
 /*Header-top*/
 .logo {
@@ -20,23 +25,29 @@ a {
 }
 .header-top-right {
   display: flex;
-  gap: 2em;
+  gap: 1em;
 }
 .search-menu {
   display: flex;
   gap: 1em;
 }
 .search-bar {
-  border: #0A3641 solid 1px;
+  border: var(--main-color) solid 1px;
   height: 1.8em;
   width: 90%;
   border-radius: 2px;
 }
 .search-bar:focus-visible {
-  color:#0A3641;
+  color: var(--main-color);
 }
 .fa-solid, .fas {
   font-size: 1.3rem;
+  padding: 0.5em;
+}
+.fa-solid:hover, .fas:hover {
+  background: var(--main-color);
+  color: #fff;
+  border-radius: 4px;
 }
 form {
   width: 35em;
@@ -52,7 +63,7 @@ nav {
 nav ul {
     padding-left: 0;
     width: 100%;
-    background: #0A3641;
+    background: var(--main-color);
     padding: 0.5em;
 }
 nav ul li {
@@ -69,10 +80,36 @@ nav ul li a:hover {
 /*-------------MAIN----------------*/
 .background-photo {
   background: url(../Images/bakgrunn.jpg);
-  background-size: 100% 100%;
-  height: 40em;   
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 35em;   
   width: 102%;
   position: relative;
   left:-1%;
-
+}
+.sale-button {
+  position: relative;
+  top: 10em;
+  left: 10em;
+  border-radius: 13px;
+  color: #fff;
+  font-size: 1.4rem;
+  font-weight: 600;
+  background: var(--main-color);
+  padding: 1em 4em;
+}
+.sale-button:hover {
+  background: #fff;
+  color: var(--main-color);
+  border: 5px solid var(--main-color);
+}
+.jackets-outer-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4em;
+  margin: 2em 8em 0em 8em;
+}
+.jackets-inner-grid {
+  height: 30em;
+  border:var(--main-color) 1px solid;
 }
