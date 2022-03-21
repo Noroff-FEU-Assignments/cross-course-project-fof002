@@ -107,7 +107,7 @@ nav ul li a:hover {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 4em;
-  margin: 2em 8em 0em 8em;
+  margin: 3em 8em 0em 8em;
 }
 .jackets-inner-grid {
   height: 30em;
