@@ -1,1 +1,9 @@
-
+/*---------------HEADER--------------*/ 
+/*---------------søkeforslag i søkemeny--------------*/ 
+nav {
+    display: flex;
+    justify-content: space-between;
+  }
+nav ul li {
+    display: inline;
+}
