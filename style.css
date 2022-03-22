@@ -13,13 +13,17 @@ html {
   overflow-x: hidden;
   color: var(--main-color);
 }
+h1 {
+  width: max-content;
+}
 h1,h2,h3 {
-  color: var(--main-color)
+  color: var(--main-color);
 }
 /*---------------HEADER--------------*/ 
 /*Header-top*/
 .logo {
   height: 4em;
+  position: relative;
 }
 .header-top {
   padding: 0.2em 2em;
@@ -34,6 +38,8 @@ h1,h2,h3 {
 .search-menu {
   display: flex;
   gap: 1em;
+  width: 35em;
+  align-items: center;
 }
 .search-bar {
   border: var(--main-color) solid 1px;
@@ -53,16 +59,13 @@ h1,h2,h3 {
   color: #fff;
   border-radius: 4px;
 }
-form {
-  width: 35em;
-}
 /*NAV*/ 
 nav {
   display: flex;
   justify-content: space-between;
   position: relative;
-  width: 102%;
-  left: -1%;
+  width: calc(100% + 2em);
+  left: -1em;
   }
 nav ul {
     padding-left: 0;
@@ -81,15 +84,39 @@ nav ul li a {
 nav ul li a:hover {
   text-decoration: underline;
 }
+/* NAV small screen */
+
+.hamburger-menu {
+  display: none;
+  height: 2em;
+  top: 0.5em;
+  background: #fff;
+  position: relative;
+}
+.hamburger-menu::after, .hamburger-menu::before {
+  content: "";
+  position: absolute;
+  width:2em;
+  border-bottom: 4px solid var(--main-color);
+}
+.hamburger-menu::after {
+  top: 0.7em;
+}
+.hamburger-menu ul {
+  position: absolute;
+  display: none;
+  left: 0%;
+  top:100%;
+}
 /*-------------MAIN----------------*/
 .background-photo {
   background: url(../Images/lake-rain.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  height: 35em;   
-  width: 102%;
+  height: 30em;   
+  width: calc(100% + 2em);
   position: relative;
-  left:-1%;
+  left:-1em;
 }
 /*Sale buttton */
 .sale-button {
@@ -176,9 +203,35 @@ nav ul li a:hover {
   background:#1c4550;
 }
 
-/* Footer */
+/*------------- Footer----------------- */
 footer {
   margin: 3em;
   height: 40em;
   border-top: 1px solid var(--main-color);
+}
+
+@media only screen and (max-width: 1000px) {
+  .jackets-outer-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media only screen and (max-width: 800px) {
+  nav, .search-menu, .sale-button::after {
+    display: none;
+    }
+  .logo {
+      left: 2em;
+    }
+  .hamburger-menu {
+    display: block;
+    width: 2em;
+  }
+  .hamburger-menu:hover > .hamburger-menu ul  {
+    display: block;
+  }
+  .jackets-outer-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
 }
