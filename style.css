@@ -138,7 +138,7 @@ nav ul li a:hover {
   width: 15em;
 }
 .hamburger-menu .search-bar {
-  width: 20em;
+  width: 15em;
   border-radius: 3px;
   border: none;
 }
@@ -284,11 +284,11 @@ footer {
     gap: 0.5em;
   }
   .jackets-inner-grid {
-    height: 15em;
-    width: 10em;
+    height: 14em;
+    width: 8em;
   }
   .jacket-photo {
-    height: 8em;
+    height: 7em;
   }
   .jacket-info {
     font-size: 0.9rem;
