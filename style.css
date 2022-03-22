@@ -215,7 +215,7 @@ nav ul li a:hover {
   background-color: #fff;
   height: 30em;
   width: 20em;
-  border:var(--main-color) 1px solid;
+  border:lightgrey 1px solid;
   padding: 1em;
 }
 .jacket-inner-grid-backside:hover {
@@ -253,7 +253,7 @@ footer {
   border-top: 1px solid var(--main-color);
 }
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 1050px) {
   .jackets-outer-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -276,8 +276,24 @@ footer {
   .hamburger-menu:hover > .hamburger-menu ul  {
     display: block;
   }
+  .popular-products-section {
+    margin: 0em 8em 0em 8em;
+  }
+  /*For making jackets in popular products smaller */
   .jackets-outer-grid {
-    display: grid;
-    grid-template-columns: 1fr;
+    gap: 0.5em;
+  }
+  .jackets-inner-grid {
+    height: 15em;
+    width: 10em;
+  }
+  .jacket-photo {
+    height: 8em;
+  }
+  .jacket-info {
+    font-size: 0.9rem;
+  }
+  h2, h3 {
+    font-size: 1rem;
   }
 }
