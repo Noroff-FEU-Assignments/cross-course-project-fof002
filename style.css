@@ -19,6 +19,9 @@ h1 {
 h1,h2,h3 {
   color: var(--main-color);
 }
+ul li {
+  list-style-type: none;
+}
 /*---------------HEADER--------------*/ 
 /*Header-top*/
 .logo {
@@ -63,6 +66,7 @@ h1,h2,h3 {
 nav {
   display: flex;
   justify-content: space-between;
+  flex-direction: column;
   position: relative;
   width: calc(100% + 2em);
   left: -1em;
@@ -84,14 +88,15 @@ nav ul li a {
 nav ul li a:hover {
   text-decoration: underline;
 }
-/* NAV small screen */
+/* NAV small screen (hamburger menu) */
 
 .hamburger-menu {
   display: none;
   height: 2em;
-  top: 0.5em;
+  top: .5em;
   background: #fff;
   position: relative;
+  z-index: 13;
 }
 .hamburger-menu::after, .hamburger-menu::before {
   content: "";
@@ -105,8 +110,41 @@ nav ul li a:hover {
 .hamburger-menu ul {
   position: absolute;
   display: none;
-  left: 0%;
-  top:100%;
+  left: -2.5em;
+  top:90%;
+  width: 100vw;
+  min-height: 100vh;
+  background: var(--main-color);
+  padding: 1em;
+  box-shadow: 0px 5px 20px 0px rgb(0 0 0 / 50%);
+}
+.hamburger-menu ul li {
+  padding: 0.5em 2em;
+}
+.hamburger-menu ul li a {
+  color: #fff;
+  font-size: 1.3rem;
+}
+.hamburger-menu ul li a:hover {
+  text-decoration: underline;
+}
+
+.hamburger-menu .search-menu {
+  display: inline;
+  position: relative;
+  width: 15em;
+}
+.hamburger-menu .search-bar {
+  width: 20em;
+  border-radius: 3px;
+  border: none;
+}
+.hamburger-menu .fa-solid, .hamburger-menu .fas {
+  color: #fff;
+}
+/* Made this just to show the menu. Did not use the checkbox hack because i rather want to build a simple menu and use a javascript function to toggle it */
+.hamburger-menu:hover ul  {
+  display: block;
 }
 /*-------------MAIN----------------*/
 .background-photo {
@@ -131,6 +169,9 @@ nav ul li a:hover {
 }
 .sale-button:hover {
   background: #1c4550; 
+}
+.sale-button:active {
+  background: var(--main-color); 
 }
 .sale-button::after {
   content: "Visit our Store";
