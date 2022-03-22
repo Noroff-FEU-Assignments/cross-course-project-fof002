@@ -11,6 +11,10 @@ a {
 }
 html {
   overflow-x: hidden;
+  color: var(--main-color);
+}
+h1,h2,h3 {
+  color: var(--main-color)
 }
 /*---------------HEADER--------------*/ 
 /*Header-top*/
@@ -79,7 +83,7 @@ nav ul li a:hover {
 }
 /*-------------MAIN----------------*/
 .background-photo {
-  background: url(../Images/bakgrunn.jpg);
+  background: url(../Images/lake-rain.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   height: 35em;   
@@ -87,29 +91,94 @@ nav ul li a:hover {
   position: relative;
   left:-1%;
 }
+/*Sale buttton */
 .sale-button {
-  position: relative;
-  top: 10em;
-  left: 10em;
-  border-radius: 13px;
+  position: absolute;
   color: #fff;
   font-size: 1.4rem;
   font-weight: 600;
   background: var(--main-color);
   padding: 1em 4em;
+  margin: 0 auto;
+  width: 100%;
 }
 .sale-button:hover {
-  background: #fff;
-  color: var(--main-color);
-  border: 5px solid var(--main-color);
+  background: #1c4550; 
 }
+.sale-button::after {
+  content: "Visit our Store";
+  position: absolute;
+  left: 14em;
+  visibility: hidden;
+  transition: ease-out 0.4s;
+}
+.sale-button:hover::after {
+    visibility: visible;
+    left: 17em;
+}
+/*Popular products section */
+
+.popular-products-section {
+  margin: 1.6em 8em 0em 8em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/*Jacket display grid */
+
 .jackets-outer-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 4em;
-  margin: 3em 8em 0em 8em;
 }
+
+/*Jacket display box */
+
 .jackets-inner-grid {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  background-color: #fff;
   height: 30em;
+  width: 20em;
   border:var(--main-color) 1px solid;
+  padding: 1em;
+}
+.jacket-inner-grid-backside:hover {
+  opacity: 1;
+  box-shadow: 0 3px 6px rgba(0,0,0,.16);
+}
+.jacket-inner-grid-backside {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  inset: 0;
+  background: #95a1a5b0; 
+}
+.jacket-photo {
+  height: 20em;
+}
+.jacket-button {
+  color: #fff;
+  font-size: 1.3rem;
+  width: 100%;
+  background: var(--main-color);
+  padding: 0.5em 1em;
+  /*border-radius: 10px;*/
+}
+.jacket-button:hover {
+  background:#1c4550;
+}
+
+/* Footer */
+footer {
+  margin: 3em;
+  height: 40em;
+  border-top: 1px solid var(--main-color);
 }
