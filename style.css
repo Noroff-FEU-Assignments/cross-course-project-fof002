@@ -4,6 +4,8 @@
 
 body {
 font-family: 'open sans';
+margin: 0;
+width: 100vw;
 }
 a {
   text-decoration: none;
@@ -68,8 +70,7 @@ nav {
   justify-content: space-between;
   flex-direction: column;
   position: relative;
-  width: calc(100% + 2em);
-  left: -1em;
+  width:100%;
   }
 nav ul {
     padding-left: 0;
@@ -152,9 +153,8 @@ nav ul li a:hover {
   background-size: cover;
   background-repeat: no-repeat;
   height: 30em;   
-  width: calc(100% + 2em);
+  width: 100%;
   position: relative;
-  left:-1em;
 }
 /*Sale buttton */
 .sale-button {
@@ -260,6 +260,9 @@ footer {
 @media only screen and (max-width: 800px) {
   nav, .search-menu, .sale-button::after {
     display: none;
+    }
+    .header-top-right {
+      gap: 0em;
     }
   .logo {
       left: 2em;
