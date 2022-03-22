@@ -263,10 +263,7 @@ footer {
     }
     .header-top-right {
       gap: 0em;
-    }
-  .logo {
-      left: 2em;
-    }
+    } 
   .hamburger-menu {
     display: block;
     width: 2em;
