@@ -290,7 +290,7 @@ footer {
     margin: 0em 8em 0em 8em;
   }
   /*For making jackets in popular products smaller */
-  /*.jackets-outer-grid {
+  .jackets-outer-grid {
     gap: 0.5em;
   }
   .jackets-inner-grid {
@@ -305,8 +305,5 @@ footer {
   }
   h2, h3 {
     font-size: 1rem;
-  }*/
-  .jackets-inner-grid {
-    font-size: 0.6rem;
   }
 }
