@@ -280,7 +280,7 @@ footer {
   display: flex;
   flex-direction: row;
   gap:0.5em;
-  column-gap: 1.5em;
+  column-gap: 2em;
 }
 .contact-link {
   text-decoration: underline;
