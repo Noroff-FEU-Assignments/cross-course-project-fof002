@@ -269,7 +269,7 @@ footer {
   display: grid;
   grid-template-columns: 1fr;
   justify-items: center;
-  row-gap: 2.5em;
+  row-gap: 1.5em;
 
 }
 .logo-footer {
@@ -280,8 +280,11 @@ footer {
   display: flex;
   flex-direction: row;
   gap:0.5em;
+  column-gap: 1.5em;
 }
-
+.contact-link {
+  text-decoration: underline;
+}
 @media only screen and (max-width: 1050px) {
   .jackets-outer-grid {
     display: grid;
