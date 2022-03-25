@@ -266,8 +266,8 @@ nav ul li a:hover {
 
 /*------------- Footer----------------- */
 footer {
-  height: 40em;
   margin-top: 1em;
+  margin-bottom: 10em;
 }
 .btn-group {
   display: flex;
@@ -280,7 +280,7 @@ footer {
   gap: 5.5em;
   align-items: center;
   border-top: 1px solid var(--main-color);
-  padding-top: 1em;
+  padding-top: 3em;
   margin: 2em 5em 0 5em;
 }
 .logo-footer {
