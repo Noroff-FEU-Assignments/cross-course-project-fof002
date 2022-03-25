@@ -155,7 +155,7 @@ nav ul li a:hover {
 /*-------------MAIN----------------*/
 .background-photo {
   background: url(../Images/lake-rain.jpg);
-  background-size: cover;
+  background-size: 100% 100%;
   background-repeat: no-repeat;
   height: 30em;   
   width: 100%;
@@ -328,6 +328,9 @@ footer {
   }
   .hamburger-menu:hover > .hamburger-menu ul  {
     display: block;
+  }
+  .background-photo {
+    background-size: cover;
   }
   .popular-products-section {
     margin: 0em 8em 0em 8em;
