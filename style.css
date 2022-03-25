@@ -252,7 +252,7 @@ nav ul li a:hover {
   font-weight: 600;
   background: var(--main-color);
   padding: 1em 4em;
-  width: 100%;
+  width: calc(100% - 8em);
   text-align: center;
   margin-top: 1em;
 }
