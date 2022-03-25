@@ -66,6 +66,9 @@ ul li {
   color: #fff;
   border-radius: 4px;
 }
+.fa-brands.fa-instagram-square, .fa-brands.fa-facebook {
+  font-size: 2rem;
+}
 /*NAV*/ 
 nav {
   display: flex;
@@ -252,9 +255,10 @@ nav ul li a:hover {
   font-weight: 600;
   background: var(--main-color);
   padding: 1em 4em;
-  width: calc(100% - 8em);
+  width: 12em;
   text-align: center;
   margin-top: 1em;
+  border-radius: 50px;
 }
 .popular-products-btn:hover {
   background: #1c4550; 
@@ -265,12 +269,15 @@ footer {
   height: 40em;
   margin-top: 1em;
 }
-.contact-outer {
-  display: grid;
-  grid-template-columns: 1fr;
-  justify-items: center;
-  row-gap: 1.5em;
 
+.contact-outer {
+  display: flex;
+  justify-content: center;
+  gap: 5.5em;
+  align-items: center;
+  border-top: 1px solid;
+  padding-top: 1em;
+  margin: 0 5em;
 }
 .logo-footer {
   height: 7em;
@@ -338,5 +345,13 @@ footer {
   }
   h2, h3 {
     font-size: 1rem;
+  }
+  .contact-outer, .btn-group {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 1.5em;
+    margin-bottom: 1.5em;
   }
 }
