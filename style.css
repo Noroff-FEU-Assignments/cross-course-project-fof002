@@ -309,6 +309,7 @@ flex-direction: row;
   height: 30em;   
   width:25em;
 }
+/* ------------Specific CSS for Jackets/store page ------------*/
 /*---------------------- Footer----------------------- */
 footer {
   margin-top: 1em;
@@ -383,7 +384,7 @@ footer {
     border-bottom: 1px solid var(--main-color);
   }
   main {
-    margin-top: 5em;
+    margin-top: 4.7em;
   }
   nav, .search-menu, .sale-button::after {
     display: none;
