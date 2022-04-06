@@ -296,10 +296,20 @@ footer {
 .contact-link {
   text-decoration: underline;
 }
-@media only screen and (max-width: 1050px) {
+@media only screen and (max-width: 1250px) {
   .jackets-outer-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
+  }
+}
+@media only screen and (max-width: 950px) {
+  .contact-outer, .btn-group {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 1.5em;
+    margin-bottom: 1.5em;
   }
 }
 @media only screen and (max-width: 800px) {
@@ -352,13 +362,5 @@ footer {
   }
   h2, h3 {
     font-size: 1rem;
-  }
-  .contact-outer, .btn-group {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    row-gap: 1.5em;
-    margin-bottom: 1.5em;
   }
 }
