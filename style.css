@@ -25,6 +25,9 @@ h1,h2,h3 {
 ul li {
   list-style-type: none;
 }
+main {
+  border-bottom: 1px solid var(--main-)
+}
 /*---------------HEADER--------------*/ 
 /*Header-top*/
 .logo {
@@ -91,7 +94,7 @@ nav ul li a {
   color: #fff;
   font-size: 1.2rem;
 }
-nav ul li a:hover {
+nav ul li a:hover, .active  {
   text-decoration: underline;
 }
 /* NAV small screen (hamburger menu) */
@@ -153,7 +156,7 @@ nav ul li a:hover {
   display: block;
 }
 /*-------------MAIN----------------*/
-.background-photo {
+.background-photo, .background-photo-contact {
   background: url(../Images/lake-rain.jpg);
   background-size: 100% 100%;
   background-repeat: no-repeat;
@@ -263,8 +266,50 @@ nav ul li a:hover {
 .popular-products-btn:hover {
   background: #1c4550; 
 }
-
-/*------------- Footer----------------- */
+/* -------------Specific CSS for contact page----------- */
+.background-photo-contact {
+  height: 5em;
+  background-size: cover;
+}
+.contact-header {
+  font-size: 2rem;
+}
+.contact-section {
+  margin: 0 1.5em;
+}
+.contact-section, .contact-icon-wrapper, .contact-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+  text-align: center;
+}
+.contact-icon-wrapper {
+flex-direction: row;
+}
+.contact-icon-wrapper p {
+  font-size: 1.5rem;
+}
+/*icon size*/
+.fa-solid.fa-comments, .fa-solid.fa-envelope, .fa-solid.fa-phone {
+  font-size: 6rem;
+}
+/* ------------Specific CSS for about page ------------*/
+.about-section {
+  display: grid;
+  grid-template-columns: 1fr 30em;
+  margin: 0 5em;
+  gap:1em;
+}
+.about-image {
+  background: url(../Images/woman_rain.jpg);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  height: 30em;   
+  width:25em;
+}
+/*---------------------- Footer----------------------- */
 footer {
   margin-top: 1em;
   margin-bottom: 10em;
@@ -301,6 +346,14 @@ footer {
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
+  .about-section {
+    grid-template-columns: 1fr 15em;
+    margin: 0 2em;
+  }
+  .about-image {
+    height: 100%;   
+    width:15em;
+  }
 }
 @media only screen and (max-width: 950px) {
   .contact-outer, .btn-group {
@@ -311,6 +364,12 @@ footer {
     row-gap: 1.5em;
     margin-bottom: 1.5em;
   }
+  .about-section {
+    grid-template-columns: 1fr;
+  }
+  .about-image {
+    display:none;
+  }
 }
 @media only screen and (max-width: 800px) {
   header {
@@ -319,6 +378,9 @@ footer {
     width: 100%;
     z-index: 10;
     background: #fff;
+  }
+  .header-top {
+    border-bottom: 1px solid var(--main-color);
   }
   main {
     margin-top: 5em;
@@ -361,6 +423,13 @@ footer {
     font-size: 0.9rem;
   }
   h2, h3 {
+    font-size: 1rem;
+  }
+  /*contact page*/
+  .fa-solid.fa-comments, .fa-solid.fa-envelope, .fa-solid.fa-phone {
+  font-size: 2rem;
+  }
+  .contact-icon-wrapper p,  .contact-text {
     font-size: 1rem;
   }
 }
