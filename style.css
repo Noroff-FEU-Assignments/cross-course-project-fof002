@@ -310,6 +310,70 @@ flex-direction: row;
   width:25em;
 }
 /* ------------Specific CSS for Jackets/store page ------------*/
+.store-section-wrapper {
+  display: grid;
+  grid-template-columns: 15em 1fr;
+  width: calc(100% - 4em);
+  margin: 0 auto;
+  max-width: 1370px;
+  gap: 2em;
+}
+.store-section-wrapper h1 {
+  margin-top: 0;
+}
+.jackets-outer-grid-store {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2em;
+}
+.jackets-inner-grid-store {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 21em;
+  width: 100%;
+  max-width: 18em;
+  border: 1px solid var(--main-color);
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+.jackets-inner-grid-store:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+.jackets-inner-grid-store .jacket-photo {
+    width: 8em;
+    height: 10em;
+}
+.store-section-left {
+  display: flex;  
+  flex-direction: column;
+  width:100%;
+  gap: 1em;
+  margin-top: 3em;
+}
+.store-category {
+  display: flex;
+  flex-direction: row;
+  width:100%;
+  position: relative;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 0.5em;
+  border-radius: 5px;
+}
+.store-category:hover {
+  background: var(--main-color);
+  color: #fff;
+}
+.store-category::after {
+  content:"";
+  position: absolute;
+  bottom: 0;
+  width:calc(100% - 1em);
+  border-bottom: 1px solid var(--main-color);
+}
+
 /*---------------------- Footer----------------------- */
 footer {
   margin-top: 1em;
@@ -344,7 +408,6 @@ footer {
 }
 @media only screen and (max-width: 1250px) {
   .jackets-outer-grid {
-    display: grid;
     grid-template-columns: 1fr 1fr;
   }
   .about-section {
@@ -354,6 +417,11 @@ footer {
   .about-image {
     height: 100%;   
     width:15em;
+  }
+}
+@media only screen and (max-width: 1150px) {
+  .jackets-outer-grid-store {
+    grid-template-columns: 1fr 1fr;
   }
 }
 @media only screen and (max-width: 950px) {
@@ -408,6 +476,18 @@ footer {
   .popular-products-section {
     margin: 0em 8em 0em 8em;
   }
+  .jackets-outer-grid-store {
+    gap:0.5em;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .store-section-wrapper {
+    grid-template-columns: 1fr;
+  }
+  .store-section-left {
+    width: calc(100% - 3em);
+    gap: 0.5em;
+    margin-top: 1em;
+  }
   /*For making jackets in popular products smaller */
 
   .jackets-outer-grid {
@@ -432,5 +512,17 @@ footer {
   }
   .contact-icon-wrapper p,  .contact-text {
     font-size: 1rem;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .jackets-outer-grid-store {
+    grid-template-columns: 1fr 1fr;
+  }
+  .jackets-inner-grid-store .jacket-photo {
+    width: 7em;
+    height: 7em;
+  }
+  .jackets-inner-grid-store {
+    height: 16em;
   }
 }
