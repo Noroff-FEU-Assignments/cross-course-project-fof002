@@ -427,6 +427,19 @@ flex-direction: row;
   background: #fff;
   color: var(--main-color);
 }
+/* Chekcout success */
+.checkout-success-wrapper {
+  margin: 0 auto;
+  text-align: center;
+  padding: 0 5vw;
+  line-height: 2em;
+}
+.checkout-success-wrapper h1 {
+  width: 100%;
+}
+.fa-solid.fa-circle-check {
+  font-size: 5rem;
+}
 /*---------------------- Footer----------------------- */
 footer {
   margin-top: 1em;
