@@ -440,6 +440,76 @@ flex-direction: row;
 .fa-solid.fa-circle-check {
   font-size: 5rem;
 }
+/* Checkout page */
+.checkout-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
+  margin:0 auto;
+}
+.checkout-wrapper .jacket-specific-wrapper {
+  padding:0;
+}
+.checkout-wrapper .jacket-specific-content {
+  width:fit-content;
+}
+.checkout-wrapper form {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1em;
+  background-color: rgb(233, 233, 233);
+  padding: 2em;
+  border-radius: 4px;
+}
+.checkout-item form {
+  width: 100%;
+  gap: 0;
+  padding: 0.5em;
+}
+.label-splitter {
+  display: flex;
+  flex-direction: row;
+  column-gap: 1em;
+}
+.checkout-wrapper input {
+  width: calc(100% - 1em);
+}
+.checkout-wrapper input, label { 
+  display: block;
+}
+.continue-checkout-button {
+  width: 6em;
+  color: #fff;
+  position: relative;
+  font-size: 1rem;
+  border: 3px solid var(--main-color);
+  background: var(--main-color);
+  border-radius: 6px;
+  padding: 0.3em 0.5em;
+}
+.continue-checkout-button:hover {
+  background: #fff;
+  color: var(--main-color);
+}
+.continue-checkout-button::after {
+  content: "To payment";
+  position: absolute;
+  color: var(--main-color);
+  left: calc(100% - 2em);
+  width: max-content;
+  transition: ease-in 0.5s;
+  visibility: hidden;
+}
+.continue-checkout-button:hover::after {
+  left: calc(100% + 1em);
+  visibility: visible;
+}
+.total {
+  border-top: 1px solid var(--main-color);
+  padding-top: 0.5em;
+}
 /*---------------------- Footer----------------------- */
 footer {
   margin-top: 1em;
@@ -484,6 +554,21 @@ footer {
     height: 100%;   
     width:15em;
   }
+  .checkout-wrapper .jacket-specific-image {
+    width: 10em;
+    height: 10em;
+  }
+  .checkout-wrapper .jacket-specific-wrapper {
+    flex-direction: column;
+    margin-top: 5em;
+  }
+  .checkout-wrapper {
+    align-items: start;
+    column-gap: 6em;
+  }
+  .checkout-wrapper h2 {
+    margin-top: 0;
+  }
 }
 @media only screen and (max-width: 1150px) {
   .jackets-outer-grid-store {
@@ -504,6 +589,17 @@ footer {
   }
   .about-image {
     display:none;
+  }
+  .checkout-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+  .checkout-wrapper .jacket-specific-wrapper {
+    margin-top: 0em;
+  }
+  .checkout-wrapper h1 {
+    position: relative;
+    left: 1em;  
   }
 }
 @media only screen and (max-width: 800px) {
@@ -557,7 +653,7 @@ footer {
   /* For jacket specific page */
   .jacket-specific-wrapper {
     flex-direction: column;
-    align-items: center;
+    align-items: start;
   }
   .jacket-specific-image {
     width: 15em;
