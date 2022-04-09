@@ -590,10 +590,6 @@ footer {
   .about-image {
     display:none;
   }
-  .checkout-wrapper {
-    flex-direction: column;
-    align-items: center;
-  }
   .checkout-wrapper .jacket-specific-wrapper {
     margin-top: 0em;
   }
@@ -650,10 +646,14 @@ footer {
     gap: 0.5em;
     margin-top: 1em;
   }
+  .checkout-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
   /* For jacket specific page */
   .jacket-specific-wrapper {
     flex-direction: column;
-    align-items: start;
+    align-items: center;
   }
   .jacket-specific-image {
     width: 15em;
