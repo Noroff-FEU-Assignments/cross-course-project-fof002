@@ -209,7 +209,10 @@ nav ul li a:hover, .active  {
   grid-template-columns: repeat(3, 1fr);
   gap: 4em;
 }
-
+.emailError {
+  display:none;
+  Color:red;
+}
 /*Jacket display box */
 
 .jackets-inner-grid {
@@ -408,6 +411,7 @@ flex-direction: row;
   width: 18em;
   gap: 0.5em;
   margin-top:1em;
+  position: relative;
 }
 .quantity {
   font-size: 1.3rem;
@@ -416,12 +420,22 @@ flex-direction: row;
 .add-item {
   gap:0.3em;
 }
+.fa-solid.fa-cart-shopping {
+  position: relative;
+}
+#quantity {
+  position: absolute;
+  top: 0;
+  right:0;
+  font-size: 0.9rem;
+}
 .checkout-button {
   background: var(--main-color);
   color: #fff;
   padding: 0.2em 0.5em;
   border: 3px solid var(--main-color);
   border-radius: 5px;
+  cursor:pointer;
 }
 .checkout-button:hover {
   background: #fff;
