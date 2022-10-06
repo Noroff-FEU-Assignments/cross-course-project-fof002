@@ -7,7 +7,7 @@ const queryId = params.get("id");
 
 function fetchJacket () {
     try {      
-            let jacket = jacketArray[`${queryId}`];
+            const jacket = jacketArray[`${queryId}`];
 
             jacketContainer.innerHTML = `<img class="jacket-specific-image" src="../images/raincoat.png"alt="Picture of White Jacket"/>
             <div class="jacket-specific-content">
@@ -35,3 +35,15 @@ function fetchJacket () {
 }
 
 fetchJacket();
+
+//Add to cart function
+
+const checkoutButton = document.querySelector(".checkout-button");
+
+checkoutButton.addEventListener("click", () => {
+    const prductId = checkoutButton.id;
+    localStorage.setItem = JSON.stringify(jacketArray[prductId]);
+    console.log(localStorage.length);
+    localStorage.clear();
+}
+);
