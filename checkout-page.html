@@ -1,177 +1,206 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">   
-    <meta name="description" content="Happy with your product? Feel free to continue shopping if the chosen jacket doesn't suit you!">
-    <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/f568442570.js" crossorigin="anonymous"></script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Happy with your product? Feel free to continue shopping if the chosen jacket doesn't suit you!"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/f568442570.js"
+      crossorigin="anonymous"
+    ></script>
     <title>Contact us - Rainy Days!</title>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <div class="header-top">
-            <div class="hamburger-menu">
-                    <ul>
-                        <li> <form action="post" class="search-menu">
-                            <label for="search"><i class="fa-solid fa-magnifying-glass"></i></label>
-                            <input type="text" name="search" placeholder="Search our store" class="search-bar">
-                        </form>
-                        </li>
-                        <li><a href="../about.html">About</a></li>
-                        <li><a href="../contact.html">Contact</a></li>
-                        <li><a href="../store.html">Store</a></li>
-                        <li><a href="../store.html">Women</a></li>
-                        <li><a href="../store.html">Men</a></li>
-                    </ul>
-            </div>
-            <a href="../index.html">
-                <img src="..\Images\RainyDays_Logo.png" alt="Rainy Days logo" class="logo">
-            </a>
-            <form action="post" class="search-menu">
-                <label for="search"><i class="fa-solid fa-magnifying-glass"></i></label>
-                <input type="text" name="search" placeholder="Search our store" class="search-bar">
-            </form>  
-            <div class="header-top-right">
-                <a href="#">
-                    <i class="fa-solid fa-user"></i>
-                </a>
-                <a href="../checkout-page.html">
-                    <i class="fa-solid fa-cart-shopping">
-                        <div id="quantity"></div>
-                      </i>
-                 </a>
-            </div>
-            </div>
-                <nav>
-                    <ul>
-                        <li><a href="../about.html">About</a></li>
-                        <li><a href="../contact.html">Contact</a></li>
-                        <li><a href="../store.html">Store</a></li>
-                        <li><a href="../store.html">Women</a></li>
-                        <li><a href="../store.html">Men</a></li>
-                    </ul>
-                </nav>
+      <div class="header-top">
+        <div class="hamburger-menu">
+          <ul>
+            <li>
+              <form action="post" class="search-menu">
+                <label for="search"
+                  ><i class="fa-solid fa-magnifying-glass"></i
+                ></label>
+                <input
+                  type="text"
+                  name="search"
+                  placeholder="Search our store"
+                  class="search-bar"
+                />
+              </form>
+            </li>
+            <li><a href="../about.html">About</a></li>
+            <li><a href="../contact.html">Contact</a></li>
+            <li><a href="../store.html">Store</a></li>
+            <li><a href="../store.html">Women</a></li>
+            <li><a href="../store.html">Men</a></li>
+          </ul>
+        </div>
+        <a href="../index.html">
+          <img
+            src="..\Images\RainyDays_Logo.png"
+            alt="Rainy Days logo"
+            class="logo"
+          />
+        </a>
+        <form action="post" class="search-menu">
+          <label for="search"
+            ><i class="fa-solid fa-magnifying-glass"></i
+          ></label>
+          <input
+            type="text"
+            name="search"
+            placeholder="Search our store"
+            class="search-bar"
+          />
+        </form>
+        <div class="header-top-right">
+          <a href="#">
+            <i class="fa-solid fa-user"></i>
+          </a>
+          <a href="../checkout-page.html">
+            <i class="fa-solid fa-cart-shopping">
+              <div id="quantity"></div>
+            </i>
+          </a>
+        </div>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="../about.html">About</a></li>
+          <li><a href="../contact.html">Contact</a></li>
+          <li><a href="../store.html">Store</a></li>
+          <li><a href="../store.html">Women</a></li>
+          <li><a href="../store.html">Men</a></li>
+        </ul>
+      </nav>
     </header>
     <main>
-        <section class="checkout-wrapper">
-            <div class="checkout-form-wrapper">
-                <h1>Checkout</h1>
-                <form action="post">
-                    <div>
-                        <label for="email">Email adress</label>
-                        <input type="text" name="email" id="email">
-                    </div>
-                    <div class=label-splitter>
-                        <div>
-                            <label for="firstname">First name</label>
-                            <input type="text" name="firstname" id="firstname">
-                        </div>
-                        <div>
-                            <label for="lastname">Last name</label>
-                            <input type="text" name="lastname" id="lastname">   
-                        </div>
-                        </div>
-                    <div>     
-                        <label for="adress">Adress</label>
-                        <input type="text" name="adress" id="adress">
-                    </div>
-                    <div>
-                        <label for="coadress">C/O Adress</label>
-                        <input type="text" name="coadress" id="coadress">
-                    </div>    
-                    <div class="label-splitter">
-                        <div>
-                            <label for="postalcode">Postal code</label>
-                            <input type="text" name="postalcode" id="postalcode">
-                        </div>
-                        <div>
-                            <label for="city">City</label>
-                            <input type="text" name="city" id="city">   
-                        </div>
-                    </div>
-                    <div>          
-                        <label for="country">Country</label>
-                        <select name="country" id="country">
-                            <option value="norway">Norway</option>
-                            <option value="sweden">Sweden</option>
-                            <option value="finland">Finland</option>
-                        </select>
-                    </div>
-                    <div>
-                        <label for="phone">Phone number</label>
-                        <div class="label-splitter">
-                            <select name="countrycode" id="countrycode">
-                                <option value="+47">+47</option>
-                                <option value="+48">+48</option>
-                                <option value="+49">+49</option>
-                            </select>
-                            <input type="text">
-                        </div>
-                    </div>
-                    <button type="submit" class="continue-checkout-button" alt="To payment">Next</button>
-                </form>
-                <a href="../checkout-success.html" class="checkout-button">To checkout success</a>
+      <section class="checkout-wrapper">
+        <div class="checkout-form-wrapper">
+          <h1>Checkout</h1>
+          <form action="post">
+            <div>
+              <label for="email">Email adress</label>
+              <input type="text" name="email" id="email" />
             </div>
-            <div class="checkout-item">
-                <div class="jacket-specific-wrapper">
-                    <img class="jacket-specific-image" src="../images/raincoat.png" alt="Picture of White Jacket">
-                    <div class="jacket-specific-content">
-                        <h2>Your items</h2>
-                        <h3>White Jacket</h3>
-                        <p>Size: XL</p>
-                        <p>Color: white</p>
-                        <p><b>1 x Kr. 800</b></p>
-                        <div class="quantity-container">
-                            <form action="post">
-                                <label for="discount">Discount code</label>
-                                <input type="text" name="discount" id="discount">
-                            </form>
-                        </div>
-                        <p>Shipping kr. 80</p>
-                        <p>Tax 25%</p>
-                        <p class="total">Total: Kr 880</p>
-                    </div>
-                </div>
+            <div class="label-splitter">
+              <div>
+                <label for="firstname">First name</label>
+                <input type="text" name="firstname" id="firstname" />
+              </div>
+              <div>
+                <label for="lastname">Last name</label>
+                <input type="text" name="lastname" id="lastname" />
+              </div>
             </div>
-        </section>
-   </main>
-   <footer>
-    <section class="contact-outer">
+            <div>
+              <label for="adress">Adress</label>
+              <input type="text" name="adress" id="adress" />
+            </div>
+            <div>
+              <label for="coadress">C/O Adress</label>
+              <input type="text" name="coadress" id="coadress" />
+            </div>
+            <div class="label-splitter">
+              <div>
+                <label for="postalcode">Postal code</label>
+                <input type="text" name="postalcode" id="postalcode" />
+              </div>
+              <div>
+                <label for="city">City</label>
+                <input type="text" name="city" id="city" />
+              </div>
+            </div>
+            <div>
+              <label for="country">Country</label>
+              <select name="country" id="country">
+                <option value="norway">Norway</option>
+                <option value="sweden">Sweden</option>
+                <option value="finland">Finland</option>
+              </select>
+            </div>
+            <div>
+              <label for="phone">Phone number</label>
+              <div class="label-splitter">
+                <select name="countrycode" id="countrycode">
+                  <option value="+47">+47</option>
+                  <option value="+48">+48</option>
+                  <option value="+49">+49</option>
+                </select>
+                <input type="text" />
+              </div>
+            </div>
+            <button
+              type="submit"
+              class="continue-checkout-button"
+              alt="To payment"
+            >
+              Next
+            </button>
+          </form>
+          <a href="../checkout-success.html" class="checkout-button"
+            >To checkout success</a
+          >
+        </div>
+        <div class="checkout-container">
+          <div class="checkout-item">
+            <img
+              class="checkout-image"
+              src="../images/raincoat.png"
+              alt="Picture of White Jacket"
+            />
+            <h3>White Jacket</h3>
+            <p><b>Kr. 800</b></p>
+            <div class="quantity-container"></div>
+          </div>
+          <p class="total">Total: Kr 880</p>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <section class="contact-outer">
         <a href="#">
-            <img src="..\Images\RainyDays_Logo.png" alt="Rainy Days logo" class="logo-footer">
-        </a> 
-       <div class="contact-info">
+          <img
+            src="..\Images\RainyDays_Logo.png"
+            alt="Rainy Days logo"
+            class="logo-footer"
+          />
+        </a>
+        <div class="contact-info">
           <section>
             <p><a href="tel:+49 999 99 999">Call us: +49 999 99 999</a></p>
-            <p><a href="mailto:contact@rainydays.com">contact@rainydays.com</a></p>
+            <p>
+              <a href="mailto:contact@rainydays.com">contact@rainydays.com</a>
+            </p>
           </section>
-       </div>
-       <div class="contact-info">
-            <section>
-                <p><a href="#" class="contact-link">Our stores</a></p>
-                <p><a href="#" class="contact-link">Customer support</a></p>
-                <p><a href="../contact.html" class="contact-link">Contact us</a></p>
-            </section>
-            <section>
-                <p><a href="../about.html" class="contact-link">About us</a></p>
-                <p><a href="#" class="contact-link">Work for us?</a></p>
-                <p><a href="#" class="contact-link">Our vision</a></p>
-            </section>
         </div>
         <div class="contact-info">
-            <a href="#">
-                <i class="fa-brands fa-instagram-square"></i>
-            </a>
-            <a href="#">
-                <i class="fa-brands fa-facebook"></i>
-             </a>
+          <section>
+            <p><a href="#" class="contact-link">Our stores</a></p>
+            <p><a href="#" class="contact-link">Customer support</a></p>
+            <p><a href="../contact.html" class="contact-link">Contact us</a></p>
+          </section>
+          <section>
+            <p><a href="../about.html" class="contact-link">About us</a></p>
+            <p><a href="#" class="contact-link">Work for us?</a></p>
+            <p><a href="#" class="contact-link">Our vision</a></p>
+          </section>
         </div>
-    </section>
-  </footer>
-  <script src="js/cart.js"></script>
-  <script src="js/add.js"></script>
-  <script src="js/checkout.js"></script>
-</body>
+        <div class="contact-info">
+          <a href="#">
+            <i class="fa-brands fa-instagram-square"></i>
+          </a>
+          <a href="#">
+            <i class="fa-brands fa-facebook"></i>
+          </a>
+        </div>
+      </section>
+    </footer>
+    <script src="js/cart.js"></script>
+  </body>
 </html>

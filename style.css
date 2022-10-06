@@ -8,6 +8,9 @@ margin: 0;
 padding: 0;
 width: 100%;
 }
+::-webkit-scrollbar {
+    display: none;
+}
 a {
   text-decoration: none;
   color: var(--main-color);
@@ -33,6 +36,16 @@ main {
 .logo {
   height: 4em;
   position: relative;
+}
+.checkout-image {
+  height: 4em;
+  width: 4em;
+}
+.checkout-item {
+  display: flex;
+  gap: 1.5em;
+  justify-content: center;
+  align-items: center;
 }
 .header-top {
   padding: 0.2em 2em;
@@ -426,7 +439,7 @@ flex-direction: row;
 #quantity {
   position: absolute;
   top: 0;
-  right:0;
+  right:-2px;
   font-size: 0.9rem;
 }
 .checkout-button {
@@ -571,17 +584,6 @@ footer {
   .checkout-wrapper .jacket-specific-image {
     width: 10em;
     height: 10em;
-  }
-  .checkout-wrapper .jacket-specific-wrapper {
-    flex-direction: column;
-    margin-top: 5em;
-  }
-  .checkout-wrapper {
-    align-items: start;
-    column-gap: 6em;
-  }
-  .checkout-wrapper h2 {
-    margin-top: 0;
   }
 }
 @media only screen and (max-width: 1150px) {

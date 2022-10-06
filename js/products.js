@@ -41,9 +41,10 @@ fetchJacket();
 const checkoutButton = document.querySelector(".checkout-button");
 
 checkoutButton.addEventListener("click", () => {
-    const prductId = checkoutButton.id;
-    localStorage.setItem = JSON.stringify(jacketArray[prductId]);
+    const productId = checkoutButton.id;
+    localStorage.setItem("product"+productId, JSON.stringify(jacketArray[productId]));
     console.log(localStorage.length);
-    localStorage.clear();
+    cartCounter();
 }
 );
+//localStorage.clear();
