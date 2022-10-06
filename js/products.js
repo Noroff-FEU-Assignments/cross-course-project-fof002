@@ -6,20 +6,14 @@ const params = new URLSearchParams(queryString);
 const queryId = params.get("id");
 
 function fetchJacket () {
+    try {      
+            let jacket = jacketArray[`${queryId}`];
 
-    try {
-
-    for (let i = 0; i < jacketArray.length; i++)
-        
-        if (i!=queryId) {
-            continue;
-        }
-        else {
-            jacketContainer.innerHTML += `<img class="jacket-specific-image" src="../images/raincoat.png"alt="Picture of White Jacket"/>
+            jacketContainer.innerHTML = `<img class="jacket-specific-image" src="../images/raincoat.png"alt="Picture of White Jacket"/>
             <div class="jacket-specific-content">
-            <h1>${jacketArray[i].name}</h1>
+            <h1>${jacket.name}</h1>
             <p>Description</p>
-            <p><b>Kr. ${jacketArray[i].price}</b></p>
+            <p><b>Kr. ${jacket.price}</b></p>
             <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam
                 consectetur natus rerum eum ea illum optio excepturi omnis maxime
@@ -30,10 +24,10 @@ function fetchJacket () {
                 <i class="fa-solid fa-angle-down"></i>
             </div>
             <div class="quantity-container">
-                <div class="checkout-button" id="${jacketArray[i].id}" class="checkout-button">Add to cart</div>
+                <div class="checkout-button" id="${jacket.id}" class="checkout-button">Add to cart</div>
             </div>
             </div>`; 
-        }
+
     }
     catch (error) {
         jacketContainer.innerHTML = "Unable to load jacket";
