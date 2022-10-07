@@ -40,6 +40,7 @@ fetchJacket();
 
 const checkoutButton = document.querySelector(".checkout-button");
 checkoutButton.addEventListener("click", () => {
+    cartCount.innerHTML = "";
     let cartArray = "";
     const cartItems = JSON.parse(localStorage.getItem("Cart"));
     if (!cartItems) {
@@ -51,9 +52,8 @@ checkoutButton.addEventListener("click", () => {
     const itemToAdd = jacketArray.find(item => item.id === checkoutButton.id);
     cartArray.push(itemToAdd); 
     localStorage.setItem("Cart", JSON.stringify(cartArray));
-    cartCounter();
+    cartCount.innerHTML = cartItems.length;
 }
 );
-//localStorage.clear();
 const item = JSON.parse(localStorage.getItem("Cart"));
 console.log(item.length);
