@@ -225,10 +225,11 @@ nav ul li a:hover, .active  {
   grid-template-columns: repeat(3, 1fr);
   gap: 4em;
 }
-.emailError {
+.emailError, .firstNameError {
   display:none;
   Color:red;
 }
+.
 /*Jacket display box */
 
 .jackets-inner-grid {

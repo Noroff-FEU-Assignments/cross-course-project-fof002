@@ -19,11 +19,11 @@ function validateForm (event) {
     else {
         emailError.style.display = "block";
     }
-    if (checkLength(firstName,0)) {
-        firstNameError.style.display = "none";
+    if (checkLength(firstName, 3)) {
+        firstNameError.style.display = "block";
     }
     else {
-        firstNameError.style.display = "block";
+        firstNameError.style.display = "none";
     }
   }
 
