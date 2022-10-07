@@ -44,8 +44,11 @@ main {
 .checkout-item {
   display: flex;
   gap: 1.5em;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+  border-bottom: 1px solid black;
+  padding: 1em 0;
+  width:100%;
 }
 .header-top {
   padding: 0.2em 2em;
@@ -472,9 +475,14 @@ flex-direction: row;
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: center;
+  align-items: start;
   gap: 2em;
   margin:0 auto;
+}
+.checkout-container {
+  position: relative;
+  top: 4.5em;
+  
 }
 .checkout-wrapper .jacket-specific-wrapper {
   padding:0;

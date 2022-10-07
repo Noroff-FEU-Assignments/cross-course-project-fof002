@@ -39,12 +39,21 @@ fetchJacket();
 //Add to cart function
 
 const checkoutButton = document.querySelector(".checkout-button");
-
 checkoutButton.addEventListener("click", () => {
-    const productId = checkoutButton.id;
-    localStorage.setItem("product"+productId, JSON.stringify(jacketArray[productId]));
-    console.log(localStorage.length);
+    let cartArray = "";
+    const cartItems = JSON.parse(localStorage.getItem("Cart"));
+    if (!cartItems) {
+        cartArray = [];
+    }
+    else {
+        cartArray = cartItems;
+    }
+    const itemToAdd = jacketArray.find(item => item.id === checkoutButton.id);
+    cartArray.push(itemToAdd); 
+    localStorage.setItem("Cart", JSON.stringify(cartArray));
     cartCounter();
 }
 );
 //localStorage.clear();
+const item = JSON.parse(localStorage.getItem("Cart"));
+console.log(item.length);
