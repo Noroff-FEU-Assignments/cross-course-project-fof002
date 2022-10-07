@@ -94,13 +94,12 @@
               <div>
                 <label for="firstname">First name</label>
                 <input type="text" name="firstname" id="firstname" />
-                <div class="firstNameError">
-                  Your name needs to be at least two characters
-                </div>
+                <div class="firstNameError">Min two characters!</div>
               </div>
               <div>
                 <label for="lastname">Last name</label>
                 <input type="text" name="lastname" id="lastname" />
+                <div class="lastNameError">Min two characters!</div>
               </div>
             </div>
             <div>
@@ -131,6 +130,7 @@
                 rows="10"
                 style="width: 100%"
               ></textarea>
+              <div class="messageError">Min ten characters!</div>
             </div>
             <button type="submit" class="checkout-button" alt="To payment">
               Send message

@@ -19,7 +19,6 @@ function fetchCheckoutItems () {
                 />
                 <h3>${product.name}</h3>
                 <p><b>Kr. ${product.price}</b></p>
-                <button class="checkout-button" id="${i}">Remove</button>
             </div>`
             }
         }
