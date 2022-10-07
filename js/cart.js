@@ -1,13 +1,13 @@
 const cartCount = document.querySelector("#quantity");
 
-window.addEventListener("load",cartCounter);
-
-const getCartItems = JSON.parse(localStorage.getItem("Cart"));
-
-function cartCounter () {
-    productsInCart = getCartItems.length;
-    cartCount.innerHTML = productsInCart;
-    if (!productsInCart) {
+window.addEventListener("load", () => {
+    const getCartItems = JSON.parse(localStorage.getItem("Cart"));
+    if (!getCartItems) {
         cartCount.innerHTML = "";
     }
+    else {
+        let productsInCart = getCartItems.length;
+        cartCount.innerHTML = productsInCart;    
+    }
 }
+);

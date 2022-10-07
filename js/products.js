@@ -37,23 +37,22 @@ function fetchJacket () {
 fetchJacket();
 
 //Add to cart function
-
+const quantityContainer = document.querySelector("#quantity");
 const checkoutButton = document.querySelector(".checkout-button");
+let cartArray = "";
+
 checkoutButton.addEventListener("click", () => {
-    cartCount.innerHTML = "";
-    let cartArray = "";
+    const itemToAdd = jacketArray.find(item => item.id === checkoutButton.id);
     const cartItems = JSON.parse(localStorage.getItem("Cart"));
+    quantityContainer.innerHTML = "";   
     if (!cartItems) {
         cartArray = [];
     }
     else {
         cartArray = cartItems;
     }
-    const itemToAdd = jacketArray.find(item => item.id === checkoutButton.id);
     cartArray.push(itemToAdd); 
     localStorage.setItem("Cart", JSON.stringify(cartArray));
-    cartCount.innerHTML = cartItems.length;
+    quantityContainer.innerHTML = cartArray.length;
 }
 );
-const item = JSON.parse(localStorage.getItem("Cart"));
-console.log(item.length);
