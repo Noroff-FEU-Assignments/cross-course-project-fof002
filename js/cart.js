@@ -7,7 +7,7 @@ const getCartItems = JSON.parse(localStorage.getItem("Cart"));
 function cartCounter () {
     productsInCart = getCartItems.length;
     cartCount.innerHTML = productsInCart;
-    if (productsInCart === 0) {
+    if (!productsInCart) {
         cartCount.innerHTML = "";
     }
 }
