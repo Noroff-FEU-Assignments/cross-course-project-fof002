@@ -28,7 +28,5 @@ function fetchCheckoutItems () {
         checkoutContainer.innerHTML = "Unable to get your products";
     }
 };
-
-
 fetchCheckoutItems();
 //localStorage.clear();
