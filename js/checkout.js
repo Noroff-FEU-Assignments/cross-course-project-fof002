@@ -20,6 +20,7 @@ function fetchCheckoutItems () {
                 <h3>${product.name}</h3>
                 <p><b>Kr. ${product.price}</b></p>
             </div>`
+            console.log(typeof(product.price));
             }
         }
     }
