@@ -631,6 +631,10 @@ footer {
     z-index: 10;
     background: #fff;
   }
+  .checkout-container {
+    top: 0;
+    
+  }
   .header-top {
     border-bottom: 1px solid var(--main-color);
   }
@@ -672,7 +676,7 @@ footer {
     margin-top: 1em;
   }
   .checkout-wrapper {
-    flex-direction: column;
+    flex-direction: column-reverse;
     align-items: center;
   }
   /* For jacket specific page */
