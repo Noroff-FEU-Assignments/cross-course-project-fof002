@@ -19,8 +19,9 @@ function fetchCheckoutItems () {
                 />
                 <h3>${product.name}</h3>
                 <p><b>Kr. ${product.price}</b></p>
-            </div>`
-            console.log(typeof(product.price));
+                <div class="checkout-button" id="${i}" class="checkout-button">Remove</div>
+            </div>
+           `
             }
         }
     }
@@ -30,3 +31,15 @@ function fetchCheckoutItems () {
 };
 fetchCheckoutItems();
 //localStorage.clear();
+//Remove item function
+document.addEventListener("click", (event) => {
+    
+    if (event.target.matches(".checkout-button")) {
+        let jacketArray = cartItems;
+        let itemId = event.target.dispatchEvent;
+        jacketArray.splice(itemId, 1);
+        localStorage.setItem("Cart", JSON.stringify(jacketArray));
+        event.target.parentElement.style.display = "none";
+    }
+}
+);
