@@ -43,7 +43,7 @@ main {
 }
 .checkout-item {
   display: flex;
-  gap: 1.5em;
+  gap: 0.5em;
   justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid black;
