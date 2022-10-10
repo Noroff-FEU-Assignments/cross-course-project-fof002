@@ -36,7 +36,7 @@ document.addEventListener("click", (event) => {
     
     if (event.target.matches(".checkout-button")) {
         let jacketArray = cartItems;
-        let itemId = event.target.dispatchEvent;
+        let itemId = event.target.id;
         jacketArray.splice(itemId, 1);
         localStorage.setItem("Cart", JSON.stringify(jacketArray));
         event.target.parentElement.style.display = "none";
