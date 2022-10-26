@@ -1,15 +1,15 @@
 :root {
-  --main-color: #0A3641;
+  --main-color: #0a3641;
 }
 
 body {
-font-family: 'open sans';
-margin: 0;
-padding: 0;
-width: 100%;
+  font-family: "open sans";
+  margin: 0;
+  padding: 0;
+  width: 100%;
 }
 ::-webkit-scrollbar {
-    display: none;
+  display: none;
 }
 a {
   text-decoration: none;
@@ -22,16 +22,18 @@ html {
 h1 {
   width: max-content;
 }
-h1,h2,h3 {
+h1,
+h2,
+h3 {
   color: var(--main-color);
 }
 ul li {
   list-style-type: none;
 }
 main {
-  border-bottom: 1px solid var(--main-)
+  border-bottom: 1px solid var(--main-);
 }
-/*---------------HEADER--------------*/ 
+/*---------------HEADER--------------*/
 /*Header-top*/
 .logo {
   height: 4em;
@@ -48,7 +50,7 @@ main {
   align-items: center;
   border-bottom: 1px solid black;
   padding: 1em 0.3em;
-  width:100%;
+  width: 100%;
   transition: 0.5s ease;
 }
 .header-top {
@@ -77,41 +79,45 @@ main {
   color: var(--main-color);
 }
 /*Font awesome icons */
-.fa-solid, .fas {
+.fa-solid,
+.fas {
   font-size: 1.3rem;
   padding: 0.5em;
 }
-.fa-solid:hover, .fas:hover {
+.fa-solid:hover,
+.fas:hover {
   background: var(--main-color);
   color: #fff;
   border-radius: 4px;
 }
-.fa-brands.fa-instagram-square, .fa-brands.fa-facebook {
+.fa-brands.fa-instagram-square,
+.fa-brands.fa-facebook {
   font-size: 2rem;
 }
-/*NAV*/ 
+/*NAV*/
 nav {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
   position: relative;
-  width:100%;
-  }
+  width: 100%;
+}
 nav ul {
-    padding-left: 0;
-    width: 100%;
-    background: var(--main-color);
-    padding: 0.5em;
+  padding-left: 0;
+  width: 100%;
+  background: var(--main-color);
+  padding: 0.5em;
 }
 nav ul li {
-    display: inline;
+  display: inline;
 }
 nav ul li a {
   padding: 0.5em;
   color: #fff;
   font-size: 1.2rem;
 }
-nav ul li a:hover, .active  {
+nav ul li a:hover,
+.active {
   text-decoration: underline;
 }
 /* NAV small screen (hamburger menu) */
@@ -119,15 +125,16 @@ nav ul li a:hover, .active  {
 .hamburger-menu {
   display: none;
   height: 2em;
-  top: .5em;
+  top: 0.5em;
   background: #fff;
   position: relative;
   z-index: 13;
 }
-.hamburger-menu::after, .hamburger-menu::before {
+.hamburger-menu::after,
+.hamburger-menu::before {
   content: "";
   position: absolute;
-  width:2em;
+  width: 2em;
   border-bottom: 4px solid var(--main-color);
 }
 .hamburger-menu::after {
@@ -137,7 +144,7 @@ nav ul li a:hover, .active  {
   position: absolute;
   display: none;
   left: -2.5em;
-  top:90%;
+  top: 90%;
   width: 100vw;
   min-height: 100vh;
   background: var(--main-color);
@@ -165,19 +172,21 @@ nav ul li a:hover, .active  {
   border-radius: 3px;
   border: none;
 }
-.hamburger-menu .fa-solid, .hamburger-menu .fas {
+.hamburger-menu .fa-solid,
+.hamburger-menu .fas {
   color: #fff;
 }
 /* Made this just to show the menu. Did not use the checkbox hack because i rather want to build a simple menu and use a javascript function to toggle it */
-.hamburger-menu:hover ul  {
+.hamburger-menu:hover ul {
   display: block;
 }
 /*-------------MAIN----------------*/
-.background-photo, .background-photo-contact {
+.background-photo,
+.background-photo-contact {
   background: url(../Images/lake-rain.jpg);
   background-size: 100% 100%;
   background-repeat: no-repeat;
-  height: 30em;   
+  height: 30em;
   width: 100%;
   position: relative;
 }
@@ -193,21 +202,21 @@ nav ul li a:hover, .active  {
   width: calc(100% - 8em);
 }
 .sale-button:hover {
-  background: #1c4550; 
+  background: #1c4550;
 }
 .sale-button:active {
-  background: var(--main-color); 
+  background: var(--main-color);
 }
 .sale-button::after {
-  content: "Visit our Store";
+  content: "Visit our Store (only index has API fetched products for CMS CA)";
   position: absolute;
   left: 14em;
   visibility: hidden;
   transition: ease-out 0.4s;
 }
 .sale-button:hover::after {
-    visibility: visible;
-    left: 17em;
+  visibility: visible;
+  left: 17em;
 }
 /*Popular products section */
 
@@ -226,9 +235,12 @@ nav ul li a:hover, .active  {
   grid-template-columns: repeat(3, 1fr);
   gap: 4em;
 }
-.emailError, .firstNameError, .lastNameError, .messageError {
-  display:none;
-  Color:red;
+.emailError,
+.firstNameError,
+.lastNameError,
+.messageError {
+  display: none;
+  color: red;
 }
 
 /*Jacket display box */
@@ -242,7 +254,7 @@ nav ul li a:hover, .active  {
   background-color: #fff;
   height: 30em;
   width: 20em;
-  border:lightgrey 1px solid;
+  border: lightgrey 1px solid;
   padding: 1em;
 }
 .jacket-inner-grid-backside:hover {
@@ -256,7 +268,7 @@ nav ul li a:hover, .active  {
   align-items: center;
   opacity: 0;
   inset: 0;
-  background: #95a1a5b0; 
+  background: #95a1a5b0;
 }
 .jacket-photo {
   height: 20em;
@@ -270,7 +282,7 @@ nav ul li a:hover, .active  {
   /*border-radius: 10px;*/
 }
 .jacket-button:hover {
-  background:#1c4550;
+  background: #1c4550;
 }
 /*Popular products button */
 .popular-products-btn {
@@ -285,7 +297,7 @@ nav ul li a:hover, .active  {
   border-radius: 50px;
 }
 .popular-products-btn:hover {
-  background: #1c4550; 
+  background: #1c4550;
 }
 /* -------------Specific CSS for contact page----------- */
 .background-photo-contact {
@@ -298,7 +310,9 @@ nav ul li a:hover, .active  {
 .contact-section {
   margin: 0 1.5em;
 }
-.contact-section, .contact-icon-wrapper, .contact-icon {
+.contact-section,
+.contact-icon-wrapper,
+.contact-icon {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -307,13 +321,15 @@ nav ul li a:hover, .active  {
   text-align: center;
 }
 .contact-icon-wrapper {
-flex-direction: row;
+  flex-direction: row;
 }
 .contact-icon-wrapper p {
   font-size: 1.5rem;
 }
 /*icon size*/
-.fa-solid.fa-comments, .fa-solid.fa-envelope, .fa-solid.fa-phone {
+.fa-solid.fa-comments,
+.fa-solid.fa-envelope,
+.fa-solid.fa-phone {
   font-size: 6rem;
 }
 /* ------------Specific CSS for about page ------------*/
@@ -321,14 +337,14 @@ flex-direction: row;
   display: grid;
   grid-template-columns: 1fr 30em;
   margin: 0 5em;
-  gap:1em;
+  gap: 1em;
 }
 .about-image {
   background: url(../Images/woman_rain.jpg);
   background-size: 100% 100%;
   background-repeat: no-repeat;
-  height: 30em;   
-  width:25em;
+  height: 30em;
+  width: 25em;
 }
 /* ------------Specific CSS for Jackets/store page ------------*/
 .store-section-wrapper {
@@ -357,26 +373,26 @@ flex-direction: row;
   width: 100%;
   max-width: 18em;
   border: 1px solid var(--main-color);
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 .jackets-inner-grid-store:hover {
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
 .jackets-inner-grid-store .jacket-photo {
-    width: 8em;
-    height: 10em;
+  width: 8em;
+  height: 10em;
 }
 .store-section-left {
-  display: flex;  
+  display: flex;
   flex-direction: column;
-  width:100%;
+  width: 100%;
   gap: 1em;
   margin-top: 3em;
 }
 .store-category {
   display: flex;
   flex-direction: row;
-  width:100%;
+  width: 100%;
   position: relative;
   justify-content: space-between;
   align-items: center;
@@ -388,10 +404,10 @@ flex-direction: row;
   color: #fff;
 }
 .store-category::after {
-  content:"";
+  content: "";
   position: absolute;
   bottom: 0;
-  width:calc(100% - 1em);
+  width: calc(100% - 1em);
   border-bottom: 1px solid var(--main-color);
 }
 /*-----------------------Jacket specific page----------*/
@@ -407,17 +423,19 @@ flex-direction: row;
   width: 25em;
 }
 .jacket-specific-image {
-  width:20em;
-  height:20em;
+  width: 20em;
+  height: 20em;
 }
-.add-item, .quantity-container, .size-container {
+.add-item,
+.quantity-container,
+.size-container {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
 }
 .size-container {
-  width:10em;
+  width: 10em;
   border: 1px solid var(--main-color);
   padding: 0 0.3em;
 }
@@ -428,7 +446,7 @@ flex-direction: row;
 .quantity-container {
   width: 18em;
   gap: 0.5em;
-  margin-top:1em;
+  margin-top: 1em;
   position: relative;
 }
 .quantity {
@@ -436,7 +454,7 @@ flex-direction: row;
   font-weight: 600;
 }
 .add-item {
-  gap:0.3em;
+  gap: 0.3em;
 }
 .fa-solid.fa-cart-shopping {
   position: relative;
@@ -444,7 +462,7 @@ flex-direction: row;
 #quantity {
   position: absolute;
   top: 0;
-  right:-2px;
+  right: -2px;
   font-size: 0.9rem;
 }
 .checkout-button {
@@ -453,7 +471,7 @@ flex-direction: row;
   padding: 0.2em 0.5em;
   border: 3px solid var(--main-color);
   border-radius: 5px;
-  cursor:pointer;
+  cursor: pointer;
 }
 .checkout-button:hover {
   background: #fff;
@@ -479,18 +497,17 @@ flex-direction: row;
   justify-content: center;
   align-items: start;
   gap: 2em;
-  margin:0 auto;
+  margin: 0 auto;
 }
 .checkout-container {
   position: relative;
   top: 4.5em;
-  
 }
 .checkout-wrapper .jacket-specific-wrapper {
-  padding:0;
+  padding: 0;
 }
 .checkout-wrapper .jacket-specific-content {
-  width:fit-content;
+  width: fit-content;
 }
 .checkout-wrapper form {
   display: flex;
@@ -513,7 +530,8 @@ flex-direction: row;
 .checkout-wrapper input {
   width: calc(100% - 1em);
 }
-.checkout-wrapper input, label { 
+.checkout-wrapper input,
+label {
   display: block;
 }
 .continue-checkout-button {
@@ -573,7 +591,7 @@ footer {
   text-align: center;
   display: flex;
   flex-direction: row;
-  gap:0.5em;
+  gap: 0.5em;
   column-gap: 2em;
 }
 .contact-link {
@@ -588,8 +606,8 @@ footer {
     margin: 0 2em;
   }
   .about-image {
-    height: 100%;   
-    width:15em;
+    height: 100%;
+    width: 15em;
   }
   .checkout-wrapper .jacket-specific-image {
     width: 10em;
@@ -602,7 +620,8 @@ footer {
   }
 }
 @media only screen and (max-width: 950px) {
-  .contact-outer, .btn-group {
+  .contact-outer,
+  .btn-group {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -614,14 +633,14 @@ footer {
     grid-template-columns: 1fr;
   }
   .about-image {
-    display:none;
+    display: none;
   }
   .checkout-wrapper .jacket-specific-wrapper {
     margin-top: 0em;
   }
   .checkout-wrapper h1 {
     position: relative;
-    left: 1em;  
+    left: 1em;
   }
 }
 @media only screen and (max-width: 800px) {
@@ -634,7 +653,6 @@ footer {
   }
   .checkout-container {
     top: 0;
-    
   }
   .header-top {
     border-bottom: 1px solid var(--main-color);
@@ -642,9 +660,11 @@ footer {
   main {
     margin-top: 4.7em;
   }
-  nav, .search-menu, .sale-button::after {
+  nav,
+  .search-menu,
+  .sale-button::after {
     display: none;
-    }
+  }
   .header-top-right {
     gap: 0;
   }
@@ -655,7 +675,7 @@ footer {
     display: block;
     width: 2em;
   }
-  .hamburger-menu:hover > .hamburger-menu ul  {
+  .hamburger-menu:hover > .hamburger-menu ul {
     display: block;
   }
   .background-photo {
@@ -665,7 +685,7 @@ footer {
     margin: 0em 8em 0em 8em;
   }
   .jackets-outer-grid-store {
-    gap:0.5em;
+    gap: 0.5em;
     grid-template-columns: repeat(3, 1fr);
   }
   .store-section-wrapper {
@@ -707,14 +727,18 @@ footer {
   .jacket-info {
     font-size: 0.9rem;
   }
-  h2, h3 {
+  h2,
+  h3 {
     font-size: 1rem;
   }
   /*contact page*/
-  .fa-solid.fa-comments, .fa-solid.fa-envelope, .fa-solid.fa-phone {
-  font-size: 2rem;
+  .fa-solid.fa-comments,
+  .fa-solid.fa-envelope,
+  .fa-solid.fa-phone {
+    font-size: 2rem;
   }
-  .contact-icon-wrapper p,  .contact-text {
+  .contact-icon-wrapper p,
+  .contact-text {
     font-size: 1rem;
   }
 }

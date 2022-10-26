@@ -1,37 +1,39 @@
-import { jacketArray } from "./constants/productList.js";
-
 const jacketContainer = document.querySelector(".jacket-specific-wrapper");
 const queryString = document.location.search;
 const params = new URLSearchParams(queryString);
 const queryId = params.get("id");
+const url = "https://frithjof.shop/test/wp-json/wc/store/products";
 
-function fetchJacket () {
-    try {      
-            const jacket = jacketArray[`${queryId}`];
-
-            jacketContainer.innerHTML = `<img class="jacket-specific-image" src="../images/raincoat.png"alt="Picture of White Jacket"/>
-            <div class="jacket-specific-content">
-            <h1>${jacket.name}</h1>
-            <p>Description</p>
-            <p><b>Kr. ${jacket.price}</b></p>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam
-                consectetur natus rerum eum ea illum optio excepturi omnis maxime
-                quidem?
-            </p>
-            <div class="size-container">
-                <div>Choose size</div>
-                <i class="fa-solid fa-angle-down"></i>
-            </div>
-            <div class="quantity-container">
-                <div class="checkout-button" id="${jacket.id}" class="checkout-button">Add to cart</div>
-            </div>
-            </div>`; 
-
+async function fetchJacket() {
+  try {
+    const response = await fetch(url);
+    const jackets = await response.json();
+    console.log(jackets);
+    for (let i = 0; i < jackets.length; i++) {
+      if (queryId == jackets[i].id) {
+        let jacket = jackets[i];
+        jacketContainer.innerHTML = `<img class="jacket-specific-image" src="../images/raincoat.png"alt="Picture of White Jacket"/>
+                <div class="jacket-specific-content">
+                <h1>${jacket.name}</h1>
+                <p>Description</p>
+                <p><b>Kr. ${jacket.prices.price}</b></p>
+                <p>
+                ${jacket.description}
+                </p>
+                <div class="size-container">
+                    <div>Choose size</div>
+                    <i class="fa-solid fa-angle-down"></i>
+                </div>
+                <div class="quantity-container">
+                    <div id="${jacket.id}" class="checkout-button">Add to cart</div>
+                </div>
+                </div>`;
+        break;
+      }
     }
-    catch (error) {
-        jacketContainer.innerHTML = "Unable to load jacket";
-    }
+  } catch (error) {
+    jacketContainer.innerHTML = "Unable to load jacket";
+  }
 }
 
 fetchJacket();
@@ -39,20 +41,24 @@ fetchJacket();
 //Add to cart function
 const quantityContainer = document.querySelector("#quantity");
 const checkoutButton = document.querySelector(".checkout-button");
-let cartArray = "";
 
-checkoutButton.addEventListener("click", () => {
-    const itemToAdd = jacketArray.find(item => item.id === checkoutButton.id);
+checkoutButton.addEventListener("click", async () => {
+  let cartArray = "";
+  try {
+    const response = await fetch(url);
+    const jackets = await response.json();
+    const itemToAdd = jackets.find((item) => item.id == checkoutButton.id);
     const cartItems = JSON.parse(localStorage.getItem("Cart"));
-    quantityContainer.innerHTML = "";   
+    quantityContainer.innerHTML = "";
     if (!cartItems) {
-        cartArray = [];
+      cartArray = [];
+    } else {
+      cartArray = cartItems;
     }
-    else {
-        cartArray = cartItems;
-    }
-    cartArray.push(itemToAdd); 
+    cartArray.push(itemToAdd);
     localStorage.setItem("Cart", JSON.stringify(cartArray));
     quantityContainer.innerHTML = cartArray.length;
-}
-);
+  } catch (error) {
+    alert("Unable to add item to cart");
+  }
+});
