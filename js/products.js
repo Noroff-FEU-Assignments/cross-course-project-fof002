@@ -42,23 +42,17 @@ fetchJacket();
 const quantityContainer = document.querySelector("#quantity");
 const checkoutButton = document.querySelector(".checkout-button");
 
-checkoutButton.addEventListener("click", async () => {
+checkoutButton.addEventListener("click", () => {
   let cartArray = "";
-  try {
-    const response = await fetch(url);
-    const jackets = await response.json();
-    const itemToAdd = jackets.find((item) => item.id == checkoutButton.id);
-    const cartItems = JSON.parse(localStorage.getItem("Cart"));
-    quantityContainer.innerHTML = "";
-    if (!cartItems) {
-      cartArray = [];
-    } else {
-      cartArray = cartItems;
-    }
-    cartArray.push(itemToAdd);
-    localStorage.setItem("Cart", JSON.stringify(cartArray));
-    quantityContainer.innerHTML = cartArray.length;
-  } catch (error) {
-    alert("Unable to add item to cart");
+  const itemToAdd = jackets.find((item) => item.id == checkoutButton.id);
+  const cartItems = JSON.parse(localStorage.getItem("Cart"));
+  quantityContainer.innerHTML = "";
+  if (!cartItems) {
+    cartArray = [];
+  } else {
+    cartArray = cartItems;
   }
+  cartArray.push(itemToAdd);
+  localStorage.setItem("Cart", JSON.stringify(cartArray));
+  quantityContainer.innerHTML = cartArray.length;
 });
