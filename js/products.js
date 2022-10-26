@@ -5,13 +5,14 @@ const queryId = params.get("id");
 const url = "https://frithjof.shop/test/wp-json/wc/store/products";
 
 async function fetchJacket() {
+  jacketContainer.innerHTML = `<div class="loader"></div> `;
   try {
     const response = await fetch(url);
     const jackets = await response.json();
     console.log(jackets);
     for (let i = 0; i < jackets.length; i++) {
-      if (queryId == jackets[i].id) {
-        let jacket = jackets[i];
+      let jacket = jackets[i];
+      if (queryId == jacket.id) {
         jacketContainer.innerHTML = `<img class="jacket-specific-image" src="../images/raincoat.png"alt="Picture of White Jacket"/>
                 <div class="jacket-specific-content">
                 <h1>${jacket.name}</h1>
