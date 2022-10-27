@@ -2,11 +2,12 @@ const url = "https://frithjof.shop/test/wp-json/wc/store/products";
 const jacketContainerIndex = document.querySelector(".jackets-outer-grid");
 
 async function fetchJackets() {
+  jacketContainerIndex.innerHTML = `<div class="loader"></div>`;
   try {
     const response = await fetch(url);
     const jackets = await response.json();
     console.log(jackets);
-
+    jacketContainerIndex.innerHTML = "";
     for (let i = 0; i < jackets.length; i++) {
       let jacket = jackets[i];
       let sale = "";

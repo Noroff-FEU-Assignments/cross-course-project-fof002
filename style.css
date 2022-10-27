@@ -187,6 +187,7 @@ nav ul li a:hover,
   width: 120px;
   height: 120px;
   animation: spin 2s linear infinite;
+  z-index: 2;
 }
 
 @keyframes spin {
@@ -482,13 +483,19 @@ nav ul li a:hover,
   right: -2px;
   font-size: 0.9rem;
 }
+.center {
+  display: flex;
+  justify-content: center;
+}
 .checkout-button {
   background: var(--main-color);
   color: #fff;
-  padding: 0.2em 0.5em;
+  padding: 0.6em 0.9em;
   border: 3px solid var(--main-color);
   border-radius: 5px;
   cursor: pointer;
+  width: fit-content;
+  box-shadow: 0px 5px 20px 0px rgb(0 0 0 / 50%);
 }
 .checkout-button:hover {
   background: #fff;
