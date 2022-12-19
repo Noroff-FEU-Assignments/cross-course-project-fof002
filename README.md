@@ -1,0 +1,40 @@
+# Cross course project
+
+![nationale-par](https://user-images.githubusercontent.com/80104002/207572860-b6b0eef3-e9b1-456a-889d-e0449e3c1727.jpg)
+
+The cross course project for the first year of noroff.
+
+## Description
+
+I was tasked with creating a blog using HTML, CSS and Javascript. The following were requirements: 
+
+- Create a prototype in Adobe XD
+- set up a headless wordpress CMS with posts.
+- Code the prototype
+- Get content for posts using Wordpress API.
+- Enable form validation with Javascript.
+- Use Netlify to launch the website from the Github repo
+- Use Hotjar to gather user data from visiting the website
+- Make changes based on collected user data.
+
+## Built With
+
+HTML, CSS, Javascript. Used wordpress API to fetch content for blog. 
+
+## Getting Started
+
+### Installing
+
+1. Clone the repo:
+
+```bash
+git clone https://github.com/Noroff-FEU-Assignments/project-exam-1-fof002.git
+```
+
+## Contributing
+
+If you would like to contribute to this project, please open a pull request so your code can be reviewed.
+
+## Contact
+
+frithjof.falck@hotmail.com

@@ -1,0 +1,780 @@
+:root {
+  --main-color: #0a3641;
+}
+
+body {
+  font-family: "open sans";
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+a {
+  text-decoration: none;
+  color: var(--main-color);
+}
+html {
+  overflow-x: hidden;
+  color: var(--main-color);
+}
+h1 {
+  width: max-content;
+}
+h1,
+h2,
+h3 {
+  color: var(--main-color);
+}
+ul li {
+  list-style-type: none;
+}
+main {
+  border-bottom: 1px solid var(--main-);
+}
+/*---------------HEADER--------------*/
+/*Header-top*/
+.logo {
+  height: 4em;
+  position: relative;
+}
+.checkout-image {
+  height: 4em;
+  width: 4em;
+}
+.checkout-item {
+  display: flex;
+  gap: 0.5em;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid black;
+  padding: 1em 0.3em;
+  width: 100%;
+  transition: 0.5s ease;
+}
+.header-top {
+  padding: 0.2em 2em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header-top-right {
+  display: flex;
+  gap: 1em;
+}
+.search-menu {
+  display: flex;
+  gap: 1em;
+  width: 35em;
+  align-items: center;
+}
+.search-bar {
+  border: var(--main-color) solid 1px;
+  height: 1.8em;
+  width: 90%;
+  border-radius: 2px;
+}
+.search-bar:focus-visible {
+  color: var(--main-color);
+}
+/*Font awesome icons */
+.fa-solid,
+.fas {
+  font-size: 1.3rem;
+  padding: 0.5em;
+}
+.fa-solid:hover,
+.fas:hover {
+  background: var(--main-color);
+  color: #fff;
+  border-radius: 4px;
+}
+.fa-brands.fa-instagram-square,
+.fa-brands.fa-facebook {
+  font-size: 2rem;
+}
+/*NAV*/
+nav {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+}
+nav ul {
+  padding-left: 0;
+  width: 100%;
+  background: var(--main-color);
+  padding: 0.5em;
+}
+nav ul li {
+  display: inline;
+}
+nav ul li a {
+  padding: 0.5em;
+  color: #fff;
+  font-size: 1.2rem;
+}
+nav ul li a:hover,
+.active {
+  text-decoration: underline;
+}
+/* NAV small screen (hamburger menu) */
+
+.hamburger-menu {
+  display: none;
+  height: 2em;
+  top: 0.5em;
+  background: #fff;
+  position: relative;
+  z-index: 13;
+}
+.hamburger-menu::after,
+.hamburger-menu::before {
+  content: "";
+  position: absolute;
+  width: 2em;
+  border-bottom: 4px solid var(--main-color);
+}
+.hamburger-menu::after {
+  top: 0.7em;
+}
+.hamburger-menu ul {
+  position: absolute;
+  display: none;
+  left: -2.5em;
+  top: 90%;
+  width: 100vw;
+  min-height: 100vh;
+  background: var(--main-color);
+  padding: 1em;
+  box-shadow: 0px 5px 20px 0px rgb(0 0 0 / 50%);
+}
+.hamburger-menu ul li {
+  padding: 0.5em 2em;
+}
+.hamburger-menu ul li a {
+  color: #fff;
+  font-size: 1.3rem;
+}
+.hamburger-menu ul li a:hover {
+  text-decoration: underline;
+}
+
+.hamburger-menu .search-menu {
+  display: inline-flex;
+  position: relative;
+  width: 15em;
+}
+.hamburger-menu .search-bar {
+  width: 15em;
+  border-radius: 3px;
+  border: none;
+}
+.hamburger-menu .fa-solid,
+.hamburger-menu .fas {
+  color: #fff;
+}
+/* Made this just to show the menu. Did not use the checkbox hack because i rather want to build a simple menu and use a javascript function to toggle it */
+.hamburger-menu:hover ul {
+  display: block;
+}
+.loader {
+  border: 16px solid #f3f3f3; /* Light grey */
+  border-top: 16px solid #3498db; /* Blue */
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+  z-index: 2;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/*-------------MAIN----------------*/
+.background-photo,
+.background-photo-contact {
+  background: url(../Images/lake-rain.jpg);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  height: 30em;
+  width: 100%;
+  position: relative;
+}
+/*Sale buttton */
+.sale-button {
+  position: absolute;
+  color: #fff;
+  font-size: 1.4rem;
+  font-weight: 600;
+  background: var(--main-color);
+  padding: 1em 4em;
+  margin: 0 auto;
+  width: calc(100% - 8em);
+}
+.sale-button:hover {
+  background: #1c4550;
+}
+.sale-button:active {
+  background: var(--main-color);
+}
+.sale-button::after {
+  content: "Visit our Store (only index has API fetched products for CMS CA)";
+  position: absolute;
+  left: 14em;
+  visibility: hidden;
+  transition: ease-out 0.4s;
+}
+.sale-button:hover::after {
+  visibility: visible;
+  left: 17em;
+}
+/*Popular products section */
+
+.popular-products-section {
+  margin: 1.6em 8em 0em 8em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/*Jacket display grid */
+
+.jackets-outer-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4em;
+}
+.emailError,
+.firstNameError,
+.lastNameError,
+.messageError {
+  display: none;
+  color: red;
+}
+
+/*Jacket display box */
+
+.jackets-inner-grid {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  background-color: #fff;
+  height: 30em;
+  width: 20em;
+  border: lightgrey 1px solid;
+  padding: 1em;
+}
+.jacket-inner-grid-backside:hover {
+  opacity: 1;
+  box-shadow: 0px 5px 20px 0px rgb(0 0 0 / 50%);
+}
+.jacket-inner-grid-backside {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  inset: 0;
+  background: #95a1a5b0;
+}
+.jacket-photo {
+  height: 20em;
+}
+.jacket-button {
+  color: #fff;
+  font-size: 1.3rem;
+  width: 100%;
+  background: var(--main-color);
+  padding: 0.5em 1em;
+  /*border-radius: 10px;*/
+}
+.jacket-button:hover {
+  background: #1c4550;
+}
+/*Popular products button */
+.popular-products-btn {
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  background: var(--main-color);
+  padding: 1em 4em;
+  width: 12em;
+  text-align: center;
+  margin-top: 1em;
+  border-radius: 50px;
+}
+.popular-products-btn:hover {
+  background: #1c4550;
+}
+/* -------------Specific CSS for contact page----------- */
+.background-photo-contact {
+  height: 5em;
+  background-size: cover;
+}
+.contact-header {
+  font-size: 2rem;
+}
+.contact-section {
+  margin: 0 1.5em;
+}
+.contact-section,
+.contact-icon-wrapper,
+.contact-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+  text-align: center;
+}
+.contact-icon-wrapper {
+  flex-direction: row;
+}
+.contact-icon-wrapper p {
+  font-size: 1.5rem;
+}
+/*icon size*/
+.fa-solid.fa-comments,
+.fa-solid.fa-envelope,
+.fa-solid.fa-phone {
+  font-size: 6rem;
+}
+/* ------------Specific CSS for about page ------------*/
+.about-section {
+  display: grid;
+  grid-template-columns: 1fr 30em;
+  margin: 0 5em;
+  gap: 1em;
+}
+.about-image {
+  background: url(../Images/woman_rain.jpg);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  height: 30em;
+  width: 25em;
+}
+/* ------------Specific CSS for Jackets/store page ------------*/
+.store-section-wrapper {
+  display: grid;
+  grid-template-columns: 15em 1fr;
+  width: calc(100% - 4em);
+  margin: 0 auto;
+  max-width: 1370px;
+  gap: 2em;
+}
+.store-section-wrapper h1 {
+  margin-top: 0;
+}
+.jackets-outer-grid-store {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2em;
+}
+.jackets-inner-grid-store {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 21em;
+  width: 100%;
+  max-width: 18em;
+  border: 1px solid var(--main-color);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+.jackets-inner-grid-store:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+.jackets-inner-grid-store .jacket-photo {
+  width: 8em;
+  height: 10em;
+}
+.store-section-left {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 1em;
+  margin-top: 3em;
+}
+.store-category {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  position: relative;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 0.5em;
+  border-radius: 5px;
+}
+.store-category:hover {
+  background: var(--main-color);
+  color: #fff;
+}
+.store-category::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: calc(100% - 1em);
+  border-bottom: 1px solid var(--main-color);
+}
+/*-----------------------Jacket specific page----------*/
+.jacket-specific-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 2em 5vw;
+  gap: 2em;
+}
+.jacket-specific-content {
+  width: 25em;
+}
+.jacket-specific-image {
+  width: 20em;
+  height: 20em;
+}
+.add-item,
+.quantity-container,
+.size-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.size-container {
+  width: 10em;
+  border: 1px solid var(--main-color);
+  padding: 0 0.3em;
+}
+.size-container:hover {
+  color: #fff;
+  background: var(--main-color);
+}
+.quantity-container {
+  width: 18em;
+  gap: 0.5em;
+  margin-top: 1em;
+  position: relative;
+}
+.quantity {
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+.add-item {
+  gap: 0.3em;
+}
+.fa-solid.fa-cart-shopping {
+  position: relative;
+}
+#quantity {
+  position: absolute;
+  top: 0;
+  right: -2px;
+  font-size: 0.9rem;
+}
+.center {
+  display: flex;
+  justify-content: center;
+}
+.checkout-button {
+  background: var(--main-color);
+  color: #fff;
+  padding: 0.6em 0.9em;
+  border: 3px solid var(--main-color);
+  border-radius: 5px;
+  cursor: pointer;
+  width: fit-content;
+  box-shadow: 0px 5px 20px 0px rgb(0 0 0 / 50%);
+}
+.checkout-button:hover {
+  background: #fff;
+  color: var(--main-color);
+}
+/* Chekcout success */
+.checkout-success-wrapper {
+  margin: 0 auto;
+  text-align: center;
+  padding: 0 5vw;
+  line-height: 2em;
+}
+.checkout-success-wrapper h1 {
+  width: 100%;
+}
+.fa-solid.fa-circle-check {
+  font-size: 5rem;
+}
+/* Checkout page */
+.checkout-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: start;
+  gap: 2em;
+  margin: 0 auto;
+}
+.checkout-container {
+  position: relative;
+  top: 4.5em;
+}
+.checkout-wrapper .jacket-specific-wrapper {
+  padding: 0;
+}
+.checkout-wrapper .jacket-specific-content {
+  width: fit-content;
+}
+.checkout-wrapper form {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1em;
+  background-color: rgb(233, 233, 233);
+  padding: 2em;
+  border-radius: 4px;
+}
+.checkout-item form {
+  width: 100%;
+  gap: 0;
+  padding: 0.5em;
+}
+.label-splitter {
+  display: flex;
+  flex-direction: row;
+  column-gap: 1em;
+}
+.checkout-wrapper input {
+  width: calc(100% - 1em);
+}
+.checkout-wrapper input,
+label {
+  display: block;
+}
+.continue-checkout-button {
+  width: 6em;
+  color: #fff;
+  position: relative;
+  font-size: 1rem;
+  border: 3px solid var(--main-color);
+  background: var(--main-color);
+  border-radius: 6px;
+  padding: 0.3em 0.5em;
+}
+.continue-checkout-button:hover {
+  background: #fff;
+  color: var(--main-color);
+}
+.continue-checkout-button::after {
+  content: "To payment";
+  position: absolute;
+  color: var(--main-color);
+  left: calc(100% - 2em);
+  width: max-content;
+  transition: ease-in 0.5s;
+  visibility: hidden;
+}
+.continue-checkout-button:hover::after {
+  left: calc(100% + 1em);
+  visibility: visible;
+}
+.total {
+  border-top: 1px solid var(--main-color);
+  padding-top: 0.5em;
+}
+/*---------------------- Footer----------------------- */
+footer {
+  margin-top: 1em;
+  margin-bottom: 10em;
+}
+.btn-group {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+.contact-outer {
+  display: flex;
+  justify-content: center;
+  gap: 5.5em;
+  align-items: center;
+  border-top: 1px solid var(--main-color);
+  padding-top: 3em;
+  margin: 2em 5em 0 5em;
+}
+.logo-footer {
+  height: 7em;
+}
+.contact-info {
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  gap: 0.5em;
+  column-gap: 2em;
+}
+.contact-link {
+  text-decoration: underline;
+}
+@media only screen and (max-width: 1250px) {
+  .jackets-outer-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .about-section {
+    grid-template-columns: 1fr 15em;
+    margin: 0 2em;
+  }
+  .about-image {
+    height: 100%;
+    width: 15em;
+  }
+  .checkout-wrapper .jacket-specific-image {
+    width: 10em;
+    height: 10em;
+  }
+}
+@media only screen and (max-width: 1150px) {
+  .jackets-outer-grid-store {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media only screen and (max-width: 950px) {
+  .contact-outer,
+  .btn-group {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 1.5em;
+    margin-bottom: 1.5em;
+  }
+  .about-section {
+    grid-template-columns: 1fr;
+  }
+  .about-image {
+    display: none;
+  }
+  .checkout-wrapper .jacket-specific-wrapper {
+    margin-top: 0em;
+  }
+  .checkout-wrapper h1 {
+    position: relative;
+    left: 1em;
+  }
+}
+@media only screen and (max-width: 800px) {
+  header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+    background: #fff;
+  }
+  .checkout-container {
+    top: 0;
+  }
+  .header-top {
+    border-bottom: 1px solid var(--main-color);
+  }
+  main {
+    margin-top: 4.7em;
+  }
+  nav,
+  .search-menu,
+  .sale-button::after {
+    display: none;
+  }
+  .header-top-right {
+    gap: 0;
+  }
+  .logo {
+    left: 1em;
+  }
+  .hamburger-menu {
+    display: block;
+    width: 2em;
+  }
+  .hamburger-menu:hover > .hamburger-menu ul {
+    display: block;
+  }
+  .background-photo {
+    background-size: cover;
+  }
+  .popular-products-section {
+    margin: 0em 8em 0em 8em;
+  }
+  .jackets-outer-grid-store {
+    gap: 0.5em;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .store-section-wrapper {
+    grid-template-columns: 1fr;
+  }
+  .store-section-left {
+    width: calc(100% - 3em);
+    gap: 0.5em;
+    margin-top: 1em;
+  }
+  .checkout-wrapper {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  /* For jacket specific page */
+  .jacket-specific-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+  .jacket-specific-image {
+    width: 15em;
+    height: 15em;
+  }
+  .jacket-specific-content {
+    width: 17em;
+  }
+  /*For making jackets in popular products smaller */
+
+  .jackets-outer-grid {
+    gap: 0.5em;
+  }
+  .jackets-inner-grid {
+    height: 14em;
+    width: 8em;
+  }
+  .jacket-photo {
+    height: 7em;
+  }
+  .jacket-info {
+    font-size: 0.9rem;
+  }
+  h2,
+  h3 {
+    font-size: 1rem;
+  }
+  /*contact page*/
+  .fa-solid.fa-comments,
+  .fa-solid.fa-envelope,
+  .fa-solid.fa-phone {
+    font-size: 2rem;
+  }
+  .contact-icon-wrapper p,
+  .contact-text {
+    font-size: 1rem;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .jackets-outer-grid-store {
+    grid-template-columns: 1fr 1fr;
+  }
+  .jackets-inner-grid-store .jacket-photo {
+    width: 7em;
+    height: 7em;
+  }
+  .jackets-inner-grid-store {
+    height: 16em;
+  }
+}
